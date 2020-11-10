@@ -1,3 +1,26 @@
 var currentDay = $("#currentDay"); //Variable set - Selecting #currentDay
 var now = moment(); //Variable set for momentjs function
 currentDay.text(now.format("dddd - MMMM Do, YYYY")); //Should Dislay the Date in following format - Tuesday-November 10th, 2020
+
+
+
+function highlight() {
+    var hour = moment().hours();
+    $("textarea").each(function () {
+        var currentTime = parseInt($(this).attr("id"));
+        if (currentTime < hour) {
+            $(this).addClass("past")
+        }
+        else if (currentTime === hour) {
+            $(this).addClass("present")
+        }
+        else {
+            $(this).addClass("future")
+        }
+
+    })
+
+
+}
+
+highlight(); 
