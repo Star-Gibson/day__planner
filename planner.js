@@ -2,6 +2,9 @@ var currentDay = $("#currentDay"); //Variable set - Selecting #currentDay
 var now = moment(); //Variable set for momentjs function
 currentDay.text(now.format("dddd - MMMM Do, YYYY")); //Should Dislay the Date in following format - Tuesday-November 10th, 2020
 
+var grabText = $("textarea").attr("id"); //Defined variable for easier use in Button Click function. 
+localStorage.getItem(grabText);
+
 highlight(); 
 
 function highlight() { //Function which uses the css classes to appropriately highlight the textarea based off of time of the day.
@@ -19,8 +22,6 @@ function highlight() { //Function which uses the css classes to appropriately hi
         }
 
     })
-
-
 }
 
 
@@ -34,6 +35,21 @@ function highlight() { //Function which uses the css classes to appropriately hi
     saveBtn.on("mouseleave", function () {
         $(this).removeClass("hover");
     });
+
+
+//Button Click
+saveBtn.each(function() {    
+
+    saveBtn.on("click", function () {
+
+        var grabber = $("textarea").val();
+        localStorage.setItem(grabText, grabber);
+    
+         }
+
+    )
+
+})
 
 
 
