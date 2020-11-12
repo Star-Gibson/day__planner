@@ -28,7 +28,7 @@ The goals of this project are as follows:
 - Clone Github Repo
 - Right click index.html and select "Open in Default Browser"
 
-## Usuage 
+## Usage 
 - Access WebPage: https://star-gibson.github.io/day__planner/
 - Provide feedback for cleaner code.
 - Screenshot: 
