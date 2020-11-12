@@ -2,8 +2,8 @@ var currentDay = $("#currentDay"); //Variable set - Selecting #currentDay
 var now = moment(); //Variable set for momentjs function
 currentDay.text(now.format("dddd - MMMM Do, YYYY")); //Should Dislay the Date in following format - Tuesday-November 10th, 2020
 
-//Defined variable for easier use in Button Click function. 
-
+//Defined variable for easier use in Button Click/Hover/Save functions. 
+var saveBtn = $(".saveBtn")
 
 highlight(); 
 
@@ -24,10 +24,20 @@ function highlight() { //Function which uses the css classes to appropriately hi
     })
 }
 
+//Routine Set Function (LocalStorage)
+$(".time-block").each(function () {
+    var id = $(this).attr("id");
+    console.log($(this).attr("id"));
+    var routine = localStorage.getItem(id);
 
+    if (routine !== null) {
+        $(this).children("routine").val(routine);
+    }
+
+});
 
 // Button Hover
-    var saveBtn = $(".saveBtn")
+    
     saveBtn.on("mouseenter", function () {
         $(this).addClass("hover");
     });
@@ -38,20 +48,6 @@ function highlight() { //Function which uses the css classes to appropriately hi
 
 
 //Button Save
-
-
-//Routine Set Function
-$(".time-block").each(function () {
-    var id = $(this).attr("id");
-    console.log($(this).attr("id"));
-    var routine = localStorage.getItem(id);
-
-    if (planner !== null) {
-        $(this).children("routine").val(routine);
-    }
-
-});
-
 
 
 
