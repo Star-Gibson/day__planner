@@ -30,7 +30,7 @@
 - Access WebPage: https://star-gibson.github.io/day__planner/
 - Provide feedback for cleaner code.
 - Screenshot: 
-  ![image](https://user-images.githubusercontent.com/72622031/98893036-9eda2b80-246f-11eb-8eb3-725e6cf25123.png)
+  ![image](https://user-images.githubusercontent.com/72622031/98894019-d053f680-2471-11eb-9fe0-b6819db08602.png)
 
 ## Credits
 - Star Gibson (https://github.com/Star-Gibson)
