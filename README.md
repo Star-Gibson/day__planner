@@ -4,6 +4,7 @@
 
 ## Table of Contents
 * [Description](#description)
+* [Criteria] (#criteria)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
