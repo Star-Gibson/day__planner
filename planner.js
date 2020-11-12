@@ -1,11 +1,13 @@
 var currentDay = $("#currentDay"); //Variable set - Selecting #currentDay
 var now = moment(); //Variable set for momentjs function
 currentDay.text(now.format("dddd - MMMM Do, YYYY")); //Should Dislay the Date in following format - Tuesday-November 10th, 2020
+var saveBtn = $(".saveBtn") //Defined variable for easier use in Button Click/Hover/Save functions. 
 
-//Defined variable for easier use in Button Click/Hover/Save functions. 
-var saveBtn = $(".saveBtn")
-
+//All Functions
+routine();
 highlight();
+Save();
+
 
 function highlight() { //Function which uses the css classes to appropriately highlight the textarea based off of time of the day.
     var hour = moment().hours(); //MomentJS Hours function.
@@ -24,7 +26,8 @@ function highlight() { //Function which uses the css classes to appropriately hi
     })
 }
 
-//Routine Set Function (LocalStorage) - Should keep data from localStorage in textarea fields upon refresh.
+//Routine Set Function (LocalStorage) - Should keep data from localStorage in textarea fields upon refresh and return info in console. 
+function routine () {
 $(".time-block").each(function () {
     var id = $(this).attr("id");
     console.log($(this).attr("id")); 
@@ -32,13 +35,15 @@ $(".time-block").each(function () {
     console.log(routine);
 
     if (routine !== null) {
-        $(this).children("routine").val(routine);
+        $(this).children(".routine").val(routine);
     }
-
+   
 });
+}
 
 
 //Button Save (localStorage) //Saves all data to localStorage in the following format - 9AM | Do homework
+function Save (){
 saveBtn.on("click", function () {
     var currentTime = $(this).parent().attr("id")
     var routine = $(this).siblings(".routine").val();
@@ -49,9 +54,10 @@ saveBtn.on("click", function () {
 
 )
 
+}
+
 
 // Button Hover
-
 saveBtn.on("mouseenter", function () {
     $(this).addClass("hover");
 });
