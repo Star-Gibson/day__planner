@@ -4,7 +4,6 @@
 
 ## Table of Contents
 * [Description](#description)
-* [Criteria] (#criteria)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
@@ -14,8 +13,7 @@
 ## Description
 - This project was designed to help us further our understading of jQuery and JavaScript by creating a daily work planner that allows the user to plan out the work day. 
 
-## Criteria
-The goals of this project are as follows: 
+- The goals of this project are as follows: 
 - GIVEN I am using a daily planner to create a schedule
 - WHEN I open the planner, THEN the current day is displayed at the top of the calendar
 - WHEN I scroll down,THEN I am presented with time blocks for standard business hours
